@@ -103,5 +103,46 @@ else
 fi
 
 ```
+### Question - 5
+You have given an array. Using Bash script, print its length, maximum element and minimum element.arr=( 2 3 4 1 6 7).
+###Bash Script
+```
+#!/usr/bin/env bash
+# method 1
+<<COMMENTS
+echo "Enter the size of the array:"
+read n #First we read the number of elements in the array from the user
+if [ $n == 0 ];then
+	echo "Empty Array"
+fi
+myarray=()
+echo "Enter the array:"
+for (( i=1 ; i<=$n ; i++ )); #Then input the array elements
+do
+	
+    read myarray[$i]
+done
+mi=${myarray[1]}#initialized the minimum and maximum variables to be printed
+mx=${myarray[1]}
 
+for i in ${!myarray[@]}; do #we iterate through the array to see if there are elements that are smaller or larger than the already initialzed min max var
+	
+	if [ $mi -ge $i ];then
+		mi=$i
+	fi
+	if [ $mx -le $i ];then
+		mx=$i
+	fi
+	
+done
+echo "Max element= ${mx} and Min element=${mi}"
+COMMENTS
+# method 2
+myarray=( 2 3 4 1 6 7 )  
+IFS=$'\n'
+echo "Max:"
+echo "${myarray[*]}" | sort -nr | head -n1 #We can use piplining to feed one output of one command line to another command
+echo "Min:"
+echo "${myarray[*]}" | sort -n | head -n1 #so we sort the array and then return the first element and in case of finding max element we reverse the array
+```
 
