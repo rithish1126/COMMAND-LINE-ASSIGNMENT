@@ -44,3 +44,27 @@ while [ $i -le 10 ]
 fi
  
 ```
+### Question - 3
+Write a Function in bash script to check if the number is prime or not? It should support the following requirement.
+          - The script should accept the input from the User.
+	  
+###Bash Script
+```
+#!/usr/bin/env bash
+echo "Enter the number: "  
+read n	#Take input from user after bash script is run
+flag=0  
+for (( i=2 ; i<$sqrt($n) ; i++ ));#The Loop runs from 2 to the square root of the number entered to check if the number is divisble by the looping numbers 
+do
+    if [ $((n%i)) == 0 ];then 
+		echo "Not a Prime Number"
+		flag=1
+		break
+	fi
+done
+if [ $flag == 0 ];then
+	echo "Prime number"
+fi
+```
+
+
