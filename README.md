@@ -21,6 +21,8 @@ echo "HOME DIRECTORY IS:$HOME"
 echo "Current Working Directory Is:$PWD"
 
 ```
+<img width="567" alt="Screenshot 2023-02-03 at 1 11 20 PM" src="https://user-images.githubusercontent.com/122535424/216540935-ed355efb-ba07-4aea-8551-1b7b30f75a06.png">
+
 
 ### Question - 2
 Write a bash script (name Table.sh) to print the Table of a number by using a while loop. It should support the following requirements.
@@ -44,6 +46,9 @@ while [ $i -le 10 ]
 fi
  
 ```
+<img width="564" alt="Screenshot 2023-02-03 at 1 13 09 PM" src="https://user-images.githubusercontent.com/122535424/216541238-fdbbc6df-cc01-483b-80f4-8bcc363eef89.png">
+
+
 ### Question - 3
 Write a Function in bash script to check if the number is prime or not? It should support the following requirement.
           - The script should accept the input from the User.
@@ -66,6 +71,8 @@ if [ $flag == 0 ];then
 	echo "Prime number"
 fi
 ```
+<img width="567" alt="Screenshot 2023-02-03 at 1 13 43 PM" src="https://user-images.githubusercontent.com/122535424/216541346-727f17b9-437c-4864-a4b4-12a0b669dfce.png">
+
 ### Question - 4
 Create a bash script that supports the following requirement.
   - Create a folder ‘Assignment’.
@@ -101,8 +108,11 @@ if [ ! -d $path/assignment ]; then
 else
 	echo "Directory exists already"
 fi
-
 ```
+<img width="850" alt="Screenshot 2023-02-03 at 1 14 37 PM" src="https://user-images.githubusercontent.com/122535424/216541510-c66ccc29-f674-47a4-b36c-beb2c2c766a9.png">
+
+<img width="941" alt="Screenshot 2023-02-03 at 1 15 11 PM" src="https://user-images.githubusercontent.com/122535424/216541608-6bea5d34-75f3-471e-a268-1ccd03bff416.png">
+
 ### Question - 5
 You have given an array. Using Bash script, print its length, maximum element and minimum element.arr=( 2 3 4 1 6 7).
 ###Bash Script
@@ -145,4 +155,5 @@ echo "${myarray[*]}" | sort -nr | head -n1 #We can use piplining to feed one out
 echo "Min:"
 echo "${myarray[*]}" | sort -n | head -n1 #so we sort the array and then return the first element and in case of finding max element we reverse the array
 ```
+<img width="555" alt="Screenshot 2023-02-03 at 1 15 48 PM" src="https://user-images.githubusercontent.com/122535424/216541712-cca43b40-d3cc-4d8f-bb35-7229cdd43829.png">
 
