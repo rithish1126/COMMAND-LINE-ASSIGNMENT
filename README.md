@@ -66,5 +66,42 @@ if [ $flag == 0 ];then
 	echo "Prime number"
 fi
 ```
+### Question - 4
+Create a bash script that supports the following requirement.
+  - Create a folder ‘Assignment’.
+  - Create a file ‘File1.txt’ inside ‘Assignment’ Folder.
+  - Copy all the content of Table.sh(2nd script) in ‘File1.txt’ without using ‘cp’ and ‘mv’ command.
+  - Append the text Welcome to Sigmoid’ to the ‘File1.txt’ file.
+  - List all the directories and files present inside Desktop Folder.
+
+| Command  | Function |
+| ------------- | ------------- |
+| mkdir -p $path/assignment | Creating folder using mkdir |
+| touch $path/assignment/File1.txt | Creating file using touch |
+| cat $path/command_line_assignment/Table.sh > $path/assignment/File1.txt | Copying data in q2 to file1 using cat |
+| echo "Welcome to Sigmoid" >> $path/assignment/File1.txt| Appending given text to file1 |
+| ls $path | Printing files and folders in Desktop |
+
+###Bash Script
+```
+#!/usr/bin/env bash
+path="/Users/devarithish/Desktop/"
+
+if [ ! -d $path/assignment ]; then
+  mkdir -p $path/assignment;
+  echo "Directory created"
+  touch $path/assignment/File1.txt
+  echo "File created"
+  cat $path/command_line_assignment/Table.sh > $path/assignment/File1.txt
+  echo "Text written from Table.sh to File1.txt"
+  echo "Welcome to Sigmoid" >> $path/assignment/File1.txt
+  echo "Text appended to File1.txt"
+  echo "ALL FILES IN DESKTOP:"
+  ls $path
+else
+	echo "Directory exists already"
+fi
+
+```
 
 
