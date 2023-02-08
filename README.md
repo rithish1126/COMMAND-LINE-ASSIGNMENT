@@ -59,6 +59,10 @@ Write a Function in bash script to check if the number is prime or not? It shoul
 echo "Enter the number: "  
 read n	#Take input from user after bash script is run
 flag=0  
+if [ $n -eq 1 ] || [ $n -eq 0 ]; then
+    echo "$n is Not Prime number"
+    return
+fi
 for (( i=2 ; i<$sqrt($n) ; i++ ));#The Loop runs from 2 to the square root of the number entered to check if the number is divisble by the looping numbers 
 do
     if [ $((n%i)) == 0 ];then 
