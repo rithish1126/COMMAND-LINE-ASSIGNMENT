@@ -4,7 +4,7 @@ Write a bash script to get the current date, time, username, home directory and 
 
 | Command  | Function |
 | ------------- | ------------- |
-|"$now" | Command to fetch the date
+|"$(DATE '+%d-%m-%y')" | Command to fetch the date
 |"$(date +"%T") | Command to fetch the time
 |"$USER" | Command to fetch the current working user
 |"$HOME"| Command to fetch the Home directory
